@@ -17,6 +17,11 @@ function SonarSweep(){
     //Get the raw output
     rawInput = inputElement.value;
     result = 0;
+    tempPrev = '';
+
+    //counts
+    var countDecreased = 0;
+    var countNeither = 0;
 
     //Split the input into an array
     const inputArray = rawInput.split("\n");
@@ -26,18 +31,21 @@ function SonarSweep(){
     for (var i = 0; i < inputArray.length; i++){
         //For each element in the array, check it against the previous element
         if (i == 0){
-            console.log(inputArray[i] + " (N/A)");
+            //console.log(inputArray[i] + " (N/A)");
+            countNeither++;
         }
-        else if (inputArray[i] > tempPrev) {
+        else if (parseInt(inputArray[i]) >= parseInt(tempPrev)) {
             //The measurement has increased since the last and its not the first value!
-            console.log(inputArray[i] + " (increased)");
+            //console.log(inputArray[i] + " (increased)");
             result++;
         }
-        else if (inputArray[i] < tempPrev) {
-            console.log(inputArray[i] + " (decreased)");
+        else if (parseInt(inputArray[i]) <= parseInt(tempPrev)) {
+            //console.log(inputArray[i] + " (decreased)");
+            countDecreased++;
         }
         else {
-            console.log(inputArray[i] + " ERROR");
+            //console.log(inputArray[i] + " ERROR");
+            countNeither++;
         }
         //console.log(inputArray[i]);
         tempPrev = inputArray[i];
@@ -45,6 +53,8 @@ function SonarSweep(){
     
     //Output the result for the user!
     console.log("Amount of increases: " + result);
+    console.log("Amount of decreases: " + countDecreased);
+    console.log("Amount of non results: " + countNeither);
     day1ResultElement.textContent = "There are " + result + " measurements that are larger than previous measurements!";
 
     // Set the styling appropriately
