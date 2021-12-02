@@ -59,7 +59,7 @@ function SonarSweep(){
     day1ResultElement.textContent = "There are " + result + " measurements that are larger than previous measurements!";
 
     // Set the styling appropriately
-    day1ResultCard.className = 'card text-white bg-success mb-3 visible';
+    day1ResultCard.className = 'card col-md-4 text-white bg-success mb-3 visible';
 
     //Trigger Part 2
     SonarSweepThreeMeasurement();
@@ -125,5 +125,5 @@ function SonarSweepThreeMeasurement(){
     day1ResultElement2.textContent = "There are " + result + " measurements that are larger than previous measurements!";
 
     // Set the styling appropriately
-    day1ResultCard2.className = 'card text-white bg-success mb-3 visible';
+    day1ResultCard2.className = 'card col-md-4 text-white bg-success mb-3 visible';
 }
