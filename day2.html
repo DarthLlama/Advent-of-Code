@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Lexie">
-    <title>Advent of Code - Lexie</title>
+    <title>Advent of Code - Lexie, Day 1</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/jumbotron/">
 
@@ -44,36 +44,52 @@
     <div class="p-5 mb-4 bg-light rounded-3">
       <div class="container-fluid py-5">
         <h1 class="display-5 fw-bold">Lexie's Advent of Code</h1>
-        <p class="col-md-8 fs-4">An advent of puzzles solved using java script! Made by me, Lexie! To put a link to the challenge here!</p>
-        <a href="https://adventofcode.com/2021/about"><button class="btn btn-primary btn-lg" type="button">Work on the Advent of Code Yourself!</button></a>
       </div>
     </div>
 
-    <div class="row">
+    <div class="row align-items-md-stretch mb-3">
+      <div class="col-md-12">
+        <div class="h-100 p-5 bg-light rounded-3">
+          <h2>Day 2: Dive!</h2>
+          <form>
+            <div class="form-group mb-3">
+              <label for="day2Input">Copy and paste the input!</label>
+              <textarea class="form-control" id="day2Input" rows="7"></textarea>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="Dive()">Sweep!</button>
+          </form>
 
-      <div class="col-6 col-md-4">
-        <div class="card text-white bg-dark mb-3">
-          <div class="card-header">Day 1</div>
-          <div class="card-body">
-            <h5 class="card-title">Sonar Sweep</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="day1.html"><button class="btn btn-outline-light" type="button">Day 1</button></a>
-          </div>
         </div>
       </div>
-
-      <div class="col-6 col-md-4">
-        <div class="card text-white bg-dark mb-3">
-          <div class="card-header">Day 2</div>
-          <div class="card-body">
-            <h5 class="card-title">Dive!</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="day2.html"><button class="btn btn-outline-light" type="button">Day 2</button></a>
-          </div>
-        </div>
-      </div>
-
     </div>
+
+    <div class="row justify-content-around">
+      <div id="day2ResultCard" class="invisible">
+        <div class="card-header">Dive Result!</div>
+        <div class="card-body">
+          <h5 class="card-title" id="day2Result"></h5>
+        </div>
+      </div>
+
+      <div id="day2ResultCard2" class="invisible">
+        <div class="card-header">Improved Dive Result!</div>
+        <div class="card-body">
+          <h5 class="card-title" id="day2Result2"></h5>
+        </div>
+      </div>
+    </div>
+   
+    
+
+    <!--
+    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+      <div class="card-header">Day 2</div>
+      <div class="card-body">
+        <h5 class="card-title">???</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  -->
 
     <footer class="pt-3 mt-4 text-muted border-top">
       &copy; 2021
@@ -84,4 +100,6 @@
 
     
   </body>
+
+  <script src="assets/js/day2.js"></script>
 </html>
